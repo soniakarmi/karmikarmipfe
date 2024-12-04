@@ -158,6 +158,16 @@
 				</executions>
 			</plugin>
 
+
+
+			<!-- SonarQube Plugin -->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>4.0.0.4121</version>
+			</plugin>
+
+
 			<!-- Maven Surefire Plugin for Tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
