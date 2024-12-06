@@ -2,7 +2,10 @@ package com.example.Backend.Services;
 
 import com.example.Backend.Dto.Requests.CoursRequest;
 import com.example.Backend.Dto.Responses.CoursResponse;
-import com.example.Backend.Entities.*;
+import com.example.Backend.Entities.Classe;
+import com.example.Backend.Entities.Cours;
+import com.example.Backend.Entities.Enseignant;
+import com.example.Backend.Entities.Utilisateur;
 import com.example.Backend.Exceptions.NotFoundException;
 import com.example.Backend.Repositories.ClasseRepository;
 import com.example.Backend.Repositories.CoursRepository;
@@ -15,8 +18,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
-import static com.example.Backend.Utility.GenralUtilities.getAuthenticatedUser;
 
 @Service
 @RequiredArgsConstructor
@@ -148,7 +149,8 @@ public class CoursService {
     }
 
 //Get  Cour ById
-public Cours getCoursById(Long id) {
+public Cours
+getCoursById(Long id) {
     return coursRepository.findById(id)
             .orElseThrow(() -> new EntityNotFoundException("Cours non trouvé avec l'ID: " + id));
 }
