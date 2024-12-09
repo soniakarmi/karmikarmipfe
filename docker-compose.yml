@@ -6,9 +6,9 @@ services:
     container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: G-Foyer-app
+      MYSQL_DATABASE: Backendsonia
     ports:
-      - "3307:3306"
+      - "3306:3306"
     networks:
       my-network:
         aliases:
@@ -31,9 +31,9 @@ services:
       SPRING_JPA_SHOW_SQL: "true"
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
-      SERVER_PORT: 8089
+      SERVER_PORT: 8080
     ports:
-      - "8089:8089"
+      - "8080:8080"
     depends_on:
       mysql-db:
         condition: service_healthy

@@ -2,7 +2,7 @@
 FROM openjdk:17-alpine
 
 # Auteur de l'image
-LABEL authors="karmi"
+LABEL authors="soniakarmi"
 
 WORKDIR /app
 
