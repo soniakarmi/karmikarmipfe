@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>Backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>Backend</name>
 	<description>Demo project for Spring Boot</description>
@@ -160,7 +160,6 @@
 			</plugin>
 
 
-
 			<!-- SonarQube Plugin -->
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
@@ -177,4 +176,16 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- Pour Nexus -->
+	<distributionManagement>
+		<repository>
+			<id>java-app</id> <!-- ID pour les releases -->
+			<url>http://192.168.50.4:8081/repository/java-app/</url>
+		</repository>
+		<snapshotRepository>
+			<id>java-app-snapshots</id> <!-- ID pour les snapshots -->
+			<url>http://192.168.50.4:8081/repository/java-app/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
